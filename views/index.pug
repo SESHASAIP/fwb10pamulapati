@@ -3,5 +3,13 @@ extends layout
 block content
   h1= title
   p Welcome to pug assignment  #{title}
-  button(type="button", class="btn btn-secondary") PressMe
+  button(type="button",onclick="update()",class="btn btn-secondary") PressMe
   div(id="target") Display
+  script.
+        let client_count=0;
+        function update()
+         {
+            client_count=client_count+1;
+            document.getElementById("target").innerHTML =client_count;
+
+         };
